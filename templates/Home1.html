@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en" class="u-responsive-xl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="./Home_files/jquery.js.download" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./Home_files/nicepage.js.download" defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet" href="./Home_files/css">
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en">
+
+    <section class="u-black u-clearfix u-section-1" id="sec-0e10">
+      <div> <!-----class="u-clearfix u-sheet u-sheet-1" ---->
+        <div class="u-align-left u-border-3 u-border-white u-container-style u-expanded-width u-group u-radius-15 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1" >
+            <h1 class="u-align-center u-text u-text-default u-text-palette-3-base u-text-1">flight delay prediction</h1>
+            <img class="u-image u-image-circle u-image-contain u-image-1" src="{{ url_for('static', filename='P2.png') }}" alt="" data-image-width="1213" data-image-height="1152">
+            <img class="u-image u-image-contain u-image-round u-preserve-proportions u-radius-10 u-image-2" src="{{ url_for('static', filename='a2.png') }}" alt="" data-image-width="512" data-image-height="512">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="u-clearfix u-valign-middle u-section-2" id="sec-17b2">
+ 
+<form action ="" method="post">  
+
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div > <!---class="u-gutter-0 u-layout"---->
+          <div class="u-layout-row">
+            <div class="u-size-30">
+              <div class="u-layout-col" >
+                <div class="u-container-style u-layout-cell u-palette-3-light-1 u-size-60 u-layout-cell-1">
+                  <div class="u-container-layout u-container-layout-1">
+                    <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                      <table class="u-table-entity">
+                        <colgroup>
+                          <col width="49%">
+                          <col width="51%">
+                        </colgroup>
+                        <tbody class="u-table-body">
+                          <tr style="height: 104px;">
+                            <td class="u-align-left u-table-cell u-table-cell-1"> PLANE AGE</td>
+                            <td class="u-table-cell"><input type="number" name="PLANE_AGE", placeholder="Age of departing aircraft" value={{request.form['PLANE_AGE']}} required></td>
+                          </tr>
+                          <tr style="height: 104px;">
+                            <td class="u-align-left u-table-cell u-table-cell-3">DISTANCE GROUP</td>
+                            <td class="u-table-cell"><select name= "DISTANCE_GROUP" required>				
+            						<option value = "DISTANCE_GROUP_1" {% if dist == 'DISTANCE_GROUP_1' %} selected {% endif %}>1</option>
+            						<option value = "DISTANCE_GROUP_2" {% if dist == 'DISTANCE_GROUP_2' %} selected {% endif %}>2</option>
+            						<option value = "DISTANCE_GROUP_3" {% if dist == 'DISTANCE_GROUP_3' %} selected {% endif %}>3</option>
+							<option value = "DISTANCE_GROUP_4" {% if dist == 'DISTANCE_GROUP_4' %} selected {% endif %}>4</option>
+							<option value = "DISTANCE_GROUP_5" {% if dist == 'DISTANCE_GROUP_5' %} selected {% endif %}>5</option>
+							<option value = "DISTANCE_GROUP_6" {% if dist == 'DISTANCE_GROUP_6' %} selected {% endif %}>6</option>
+							<option value = "DISTANCE_GROUP_7" {% if dist == 'DISTANCE_GROUP_7' %} selected {% endif %}>7</option>
+							<option value = "DISTANCE_GROUP_8" {% if dist == 'DISTANCE_GROUP_8' %} selected {% endif %}>8</option>
+							<option value = "DISTANCE_GROUP_9" {% if dist == 'DISTANCE_GROUP_9' %} selected {% endif %}>9</option>
+							<option value = "DISTANCE_GROUP_10" {% if dist == 'DISTANCE_GROUP_10' %} selected {% endif %}>10</option>
+							<option value = "DISTANCE_GROUP_11" {% if dist == 'DISTANCE_GROUP_11' %} selected {% endif %}>11</option>
+        					     </select></td>
+                          </tr>
+                          <tr style="height: 104px;">
+                            <td class="u-align-left u-table-cell u-table-cell-5">SEGMENT NUMBER</td>
+                            <td class="u-table-cell"><select name= "SEGMENT_NUMBER" required>
+            						<option value = "SEGMENT_NUMBER_1" {% if seg == 'SEGMENT_NUMBER_1' %} selected {% endif %}>1</option>
+            						<option value = "SEGMENT_NUMBER_2" {% if seg == 'SEGMENT_NUMBER_2' %} selected {% endif %}>2</option>
+            						<option value = "SEGMENT_NUMBER_3" {% if seg == 'SEGMENT_NUMBER_3' %} selected {% endif %}>3</option>
+							<option value = "SEGMENT_NUMBER_4" {% if seg == 'SEGMENT_NUMBER_4' %} selected {% endif %}>4</option>
+							<option value = "SEGMENT_NUMBER_5" {% if seg == 'SEGMENT_NUMBER_5' %} selected {% endif %}>5</option>
+							<option value = "SEGMENT_NUMBER_6" {% if seg == 'SEGMENT_NUMBER_6' %} selected {% endif %}>6</option>
+							<option value = "SEGMENT_NUMBER_7" {% if seg == 'SEGMENT_NUMBER_7' %} selected {% endif %}>7</option>
+							<option value = "SEGMENT_NUMBER_8" {% if seg == 'SEGMENT_NUMBER_8' %} selected {% endif %}>8</option>
+							<option value = "SEGMENT_NUMBER_9" {% if seg == 'SEGMENT_NUMBER_9' %} selected {% endif %}>9</option>
+							<option value = "SEGMENT_NUMBER_10" {% if seg == 'SEGMENT_NUMBER_10' %} selected {% endif %}>10</option>
+        					     </select></td>
+                          </tr>
+                          <tr style="height: 104px;">
+                            <td class="u-table-cell u-table-cell-7">AIRPORT FLIGHTS MONTH</td>
+                            <td class="u-table-cell"><input type="number" name="AIRPORT_FLIGHTS_MONTH", placeholder="Avg Airport Flights per Month" value={{request.form['AIRPORT_FLIGHTS_MONTH']}} required></td>
+                          </tr>
+                          <tr style="height: 104px;">
+                            <td class="u-table-cell u-table-cell-9">CONCURRENT FLIGHTS</td>
+                            <td class="u-table-cell"><input type="number" name="CONCURRENT_FLIGHTS", placeholder="Concurrent flights leaving from the airport in the same departure block" value={{request.form['CONCURRENT_FLIGHTS']}} required></td>
+                          </tr>
+                          <tr style="height: 87px;">
+                            <td class="u-table-cell u-table-cell-11">AIRLINE AIRPORT FLIGHTS MONTH</td>
+                            <td class="u-table-cell"><input type="number" name="AIRLINE_AIRPORT_FLIGHTS_MONTH", placeholder="Avg Airline Flights per Month" value={{request.form['AIRLINE_AIRPORT_FLIGHTS_MONTH']}} required></td>
+                          </tr>
+                          <tr style="height: 104px;">
+                            <td class="u-table-cell u-table-cell-13">AVG MONTHLY PASS AIRPORT</td>
+                            <td class="u-table-cell"><input type="number" name="AVG_MONTHLY_PASS_AIRPORT", placeholder="Avg Passengers for the departing airport for the month" value={{request.form['AVG_MONTHLY_PASS_AIRPORT']}} required></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+	
+
+                                                                                              
+                <div class="u-size-30">
+                  <div class="u-layout-row">
+                    <div class="u-container-style u-grey-60 u-layout-cell u-size-60 u-layout-cell-4"                     			
+			<div class="u-container-layout u-container-layout-4">
+                        <div class="u-expanded-width u-table u-table-responsive u-table-2">
+
+<br>
+<table>
+<tr>
+<td><center><strong>LATITUDE</strong><br><br><input type="number" name="LATITUDE", placeholder="Latitude of Departing Airport" , step="any" maxlength="15" value={{request.form['LATITUDE']}} required style="color:black;"></center></td>
+<td><center><strong>LONGITUDE</strong><br><br><input type="number" name="LONGITUDE", placeholder="Longitude of Departing Airport" , step="any" value={{request.form['LONGITUDE']}} required style="color:black;"></center></td>
+</tr>
+</table>
+<br>
+
+                          <table class="u-table-entity">
+                            <colgroup>
+                              <col width="33.3%">
+                              <col width="33.3%">
+                              <col width="33.4%">
+                            </colgroup>
+                            <tbody class="u-table-body">
+                              <tr style="height: 200px;">
+                                <td class="u-align-center u-border-1 u-border-grey-dark-1 u-table-cell u-table-valign-top u-table-cell-15">precipitation for day                <br><br><br><input type="range" name="PRCP" id="PRCP_v" min="1" max="5" value={{request.form['PRCP']}} step=".01" oninput="PRCP_v_disp.value = PRCP_v.value"><output id="PRCP_v_disp"></output></td>
+                                <td class="u-align-center u-border-1 u-border-grey-dark-1 u-table-cell u-table-valign-top u-table-cell-16">Max temperature for day
+<br><br><input type="range" min="-10" max="90" value={{request.form['TMAX']}} name="TMAX" id="TMAX_v" step=".01" oninput="TMAX_v_disp.value = TMAX_v.value"><output id="TMAX_v_disp"></output></td>
+                                <td class="u-align-center u-border-1 u-border-grey-dark-1 u-table-cell u-table-valign-top u-table-cell-17">Max wind speed for day
+<br><br><input type="range" min="0" max="35" value={{request.form['AWND']}} id="AWND_v" name="AWND", step=".01" oninput="AWND_v_disp.value = AWND_v.value"><output id="AWND_v_disp"></output></td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+ </form>
+<br>
+<div style="padding:25px;">
+<table style="border-collapse: separate; background:black; background: rgba(00, 00, 50, 0.5); border-radius:15px;">
+<tr><td style="padding:15px; border-radius:15px; border: double 8px white;">
+ <br>
+ {% if result=="Flight may delay more than 15 min" %}
+         <center><p><strong><h3 style="color:gold;"> Result</h3></strong><h4 style="color:#ff3355">{{ result }}</h4></center>
+ {% else %}
+         <center><p><strong><h3 style="color:gold;"> Result</h3></strong><h4 style="color:#aabbff">{{ result }}</h4></center>
+      {% endif %}
+<br></td></tr>
+</table>
+<div>
+</div>
+<br><center><a href="http://127.0.0.1:5000/"><h4 style="color:#00bbff"> <<<<< Click here to get new prediction >>>>> </h4></a></center>
+</div>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  
+<style>.u-disable-duration * {transition-duration: 0s !important;}</style></body></html>
