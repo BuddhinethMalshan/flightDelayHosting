@@ -43,8 +43,8 @@ def result():
         else:
             output = "Flight may not delay more than 15 min"
 
-        return render_template("Home1.html",result=output,dist=dist,seg=seg)
+        return render_template("resultPage.html",result=output,dist=dist,seg=seg)
 
 if __name__ == "__main__":
     #app.debug = True
-    app.run(debug = True)
+    app.run()
