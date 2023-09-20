@@ -2,5 +2,4 @@ pip
 Flask<= 2.2.5
 pandas>=0.19
 numpy>=1.9.2
-pickle
 xgboost
