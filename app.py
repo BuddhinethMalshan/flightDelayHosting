@@ -52,16 +52,3 @@ def result():
             output = "Flight may not delay more than 15 min"
 
         return render_template("Home1.html",result=output,dist=dist,seg=seg)
-
-
-# In[ ]:
-
-
-get_ipython().system('pip install xgboost')
-
-
-# In[ ]:
-
-
-
-
