@@ -1,4 +1,5 @@
 pip
+gunicorn==19.7.1
 Flask<= 2.2.5
 pandas>=0.19
 numpy>=1.9.2
