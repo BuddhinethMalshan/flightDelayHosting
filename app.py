@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from flask import Flask, render_template,request,jsonify, url_for
 import pickle
 import numpy as np
-
 
 app = Flask(__name__)
 
@@ -15,7 +8,6 @@ app = Flask(__name__)
 def home():
      return render_template('Home.html')
 
-    
 @app.route('/result', methods=['POST','GET'])
 def result():
     if request.method == 'POST':
@@ -55,4 +47,4 @@ def result():
 
 if __name__ == "__main__":
     #app.debug = True
-    app.run()
+    app.run(debug=True)
