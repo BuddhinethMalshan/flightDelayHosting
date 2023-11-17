@@ -1,5 +1,5 @@
-python 3.8
 pip
+python 3.8
 gunicorn==19.7.1
 Flask<= 2.2.5
 pandas>=0.19
